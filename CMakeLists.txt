@@ -30,7 +30,7 @@ target_include_directories(meshoptimizer INTERFACE "$<BUILD_INTERFACE:${CMAKE_CU
 if(MSVC)
     target_compile_options(meshoptimizer PRIVATE /W4 /WX)
 else()
-    target_compile_options(meshoptimizer PRIVATE -Wall -Wextra -Werror)
+    target_compile_options(meshoptimizer PRIVATE -Wall -Wextra -Werror -fpic)
 endif()
 
 if(BUILD_SHARED_LIBS)
